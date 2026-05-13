@@ -1,5 +1,6 @@
 package com.example.item;
 
+import com.example.UpdateItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,4 +22,11 @@ public class ForgeController
     {
         return ForgeService.findItemById(name);
     }
+
+    @PatchMapping("/update")
+    public ItemResponse updateitem(@RequestBody UpdateItem request)
+    {
+        return ForgeService.updateItem(request);
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.example.item;
 
+import com.example.UpdateItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -52,6 +53,30 @@ public class ForgeService
         {
             throw new IllegalArgumentException(name + "는 있는 아이템입니다.");
         }
+        return ItemResponse.of(item);
+    }
+
+    // 강화 로직 넣기 전 일반 수정 메서드
+    public ItemResponse updateItem(UpdateItem request)
+    {
+        Item item = itemRepository.findByName(request.name()).orElse(null);
+
+        if(item == null)
+        {
+            throw new IllegalArgumentException(request.name() + "는 없는 아이템입니다.");
+        }
+
+        //공격력이 1보다 낮을 때
+        if(request.attackPower() <= 0)
+        {
+            throw new IllegalArgumentException("공격력은 1 이상이어야 합니다.");
+        }
+
+        item.setAttackPower(request.attackPower());
+        item.setDurability(request.durability());
+
+        itemRepository.save(item);
+
         return ItemResponse.of(item);
     }
 }
