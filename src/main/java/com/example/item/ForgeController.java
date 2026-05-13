@@ -29,4 +29,10 @@ public class ForgeController
         return ForgeService.updateItem(request);
     }
 
+    @DeleteMapping
+    public void deleteItem(@RequestParam String name)
+    {
+        ForgeService.deleteItems(name);
+    }
+
 }

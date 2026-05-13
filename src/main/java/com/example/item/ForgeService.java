@@ -51,7 +51,7 @@ public class ForgeService
         // 만약 DB에 있다면
         if(item == null)
         {
-            throw new IllegalArgumentException(name + "는 있는 아이템입니다.");
+            throw new IllegalArgumentException(name + "는 없는 아이템입니다.");
         }
         return ItemResponse.of(item);
     }
@@ -76,6 +76,20 @@ public class ForgeService
         item.setDurability(request.durability());
 
         itemRepository.save(item);
+
+        return ItemResponse.of(item);
+    }
+
+    public ItemResponse deleteItems(@RequestParam String name)
+    {
+        Item item = itemRepository.findByName(name).orElse(null);
+
+        if(item == null)
+        {
+            throw new IllegalArgumentException(name + "는 없는 아이템입니다");
+        }
+
+        itemRepository.delete(item);
 
         return ItemResponse.of(item);
     }
