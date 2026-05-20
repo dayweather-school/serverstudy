@@ -1,5 +1,8 @@
-package com.example.exampleclass1.ttt;
+package com.example.exampleclass1.domain.ttt.controller;
 
+import com.example.exampleclass1.domain.ttt.request.CreateUserRequest;
+import com.example.exampleclass1.domain.ttt.service.PrintService;
+import com.example.exampleclass1.domain.ttt.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

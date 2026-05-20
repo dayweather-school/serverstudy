@@ -1,5 +1,6 @@
-package com.example.exampleclass1.ttt;
+package com.example.exampleclass1.domain.ttt.Repository;
 
+import com.example.exampleclass1.domain.ttt.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 // JpaRepository가 Spring Data Jpa가 제공해주는 DB의 기본 기능 모음

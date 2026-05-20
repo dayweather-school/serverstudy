@@ -1,6 +1,9 @@
-package com.example.item;
+package com.example.exampleclass1.domain.item.controller;
 
-import com.example.UpdateItem;
+import com.example.exampleclass1.domain.item.dto.request.UpdateItem;
+import com.example.exampleclass1.domain.item.dto.request.CreateItemRequest;
+import com.example.exampleclass1.domain.item.service.ForgeService;
+import com.example.exampleclass1.domain.item.dto.response.ItemResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

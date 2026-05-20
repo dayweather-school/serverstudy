@@ -1,5 +1,8 @@
-package com.example.exampleclass1.ttt;
+package com.example.exampleclass1.domain.ttt.service;
 
+import com.example.exampleclass1.domain.ttt.user.User;
+import com.example.exampleclass1.domain.ttt.Repository.UserRepository;
+import com.example.exampleclass1.domain.ttt.request.CreateUserRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

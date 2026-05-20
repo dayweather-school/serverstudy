@@ -1,4 +1,4 @@
-package com.example.item;
+package com.example.exampleclass1.global.exceiption;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
