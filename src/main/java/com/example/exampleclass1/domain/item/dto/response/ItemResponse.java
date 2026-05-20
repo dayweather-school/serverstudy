@@ -1,4 +1,6 @@
-package com.example.item;
+package com.example.exampleclass1.domain.item.dto.response;
+
+import com.example.exampleclass1.domain.item.entity.Item;
 
 public record ItemResponse
         (

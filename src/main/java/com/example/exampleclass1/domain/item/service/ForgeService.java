@@ -1,11 +1,17 @@
-package com.example.item;
+package com.example.exampleclass1.domain.item.service;
 
 import com.example.UpdateItem;
+import com.example.exampleclass1.domain.item.dto.request.CreateItemRequest;
+import com.example.exampleclass1.domain.item.dto.response.ItemResponse;
+import com.example.exampleclass1.domain.item.entity.Item;
+import com.example.exampleclass1.domain.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
+@Transactional(rollbackFor = Exception.class)
 @RequiredArgsConstructor
 public class ForgeService
 {

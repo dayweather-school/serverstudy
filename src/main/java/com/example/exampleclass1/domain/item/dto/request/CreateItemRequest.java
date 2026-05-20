@@ -1,4 +1,4 @@
-package com.example.item;
+package com.example.exampleclass1.domain.item.dto.request;
 
 public record CreateItemRequest(
         String name,

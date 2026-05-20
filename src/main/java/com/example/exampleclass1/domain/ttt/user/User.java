@@ -1,4 +1,4 @@
-package com.example.exampleclass1.ttt;
+package com.example.exampleclass1.domain.ttt.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;
