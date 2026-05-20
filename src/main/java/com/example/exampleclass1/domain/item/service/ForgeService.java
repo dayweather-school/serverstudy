@@ -1,6 +1,6 @@
 package com.example.exampleclass1.domain.item.service;
 
-import com.example.UpdateItem;
+import com.example.exampleclass1.domain.item.dto.request.UpdateItem;
 import com.example.exampleclass1.domain.item.dto.request.CreateItemRequest;
 import com.example.exampleclass1.domain.item.dto.response.ItemResponse;
 import com.example.exampleclass1.domain.item.entity.Item;
